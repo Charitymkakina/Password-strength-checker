@@ -103,10 +103,10 @@ function updateItem(id, condition) {
   const item = document.getElementById(id);
 
   if (condition) {
-    item.innerText = item.innerText.replace("❌", "✔");
+    item.innerText = item.innerText.replace;
     item.className = "pass";
   } else {
-    item.innerText = item.innerText.replace("✔", "❌");
+    item.innerText = item.innerText.replace;
     item.className = "fail";
   }
 }
@@ -136,3 +136,4 @@ function resetUI() {
   document.getElementById("entropyResult").innerText = "";
   document.getElementById("crackTimeResult").innerText = "";
 }
+
