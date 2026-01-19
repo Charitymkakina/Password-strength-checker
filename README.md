@@ -1,2 +1,2 @@
 # Password-strength-checker
-A client-side password strenght checker with real-time validation and entropy estimation
+A client-side password strength checker with real-time validation and entropy estimation
