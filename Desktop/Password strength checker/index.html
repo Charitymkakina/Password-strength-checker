@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Password Strength Checker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>CYBER VAULT</h1>
+    <p class="subtitle">
+      Analyze your password strength using entropy and crack-time estimation.
+    </p>
+
+    <!-- Password Input -->
+    <input
+      type="password"
+      id="passwordInput"
+      placeholder="Enter your password"
+      oninput="analyzePassword()"
+    />
+
+    <!-- Strength Meter -->
+    <div class="strength-bar">
+      <div id="strengthFill"></div>
+    </div>
+
+    <!-- Strength Results -->
+    <div class="results">
+      <p id="strengthLabel"></p>
+      <p id="entropyResult"></p>
+      <p id="crackTimeResult"></p>
+    </div>
+
+    <!-- Live Checklist -->
+    <ul class="checklist">
+      <li id="lengthCheck">At least 8 characters</li>
+      <li id="lowerCheck">Lowercase letter</li>
+      <li id="upperCheck">Uppercase letter</li>
+      <li id="numberCheck"> Number</li>
+      <li id="symbolCheck">Special character</li>
+    </ul>
+
+    <!-- Tips -->
+    <p id="tips" class="tips"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
