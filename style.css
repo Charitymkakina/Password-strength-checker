@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Background */
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(56,189,248,0.15), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(34,197,94,0.15), transparent 40%),
+    linear-gradient(135deg, #020617, #020617);
+  color: #e5e7eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Grid overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+/* Main Card */
+.container {
+  width: 100%;
+  max-width: 460px;
+  background: rgba(2, 6, 23, 0.9);
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow:
+    0 0 25px rgba(56,189,248,0.15),
+    0 0 60px rgba(34,197,94,0.05);
+  backdrop-filter: blur(6px);
+}
+
+/* Text */
+h1 {
+  text-align: center;
+  color: #38bdf8;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 0.9em;
+  color: #94a3b8;
+}
+
+/* Input */
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1em;
+}
+
+/* Strength Bar */
+.strength-bar {
+  width: 100%;
+  height: 10px;
+  background: #1e293b;
+  border-radius: 6px;
+  margin: 15px 0;
+}
+
+#strengthFill {
+  height: 100%;
+  width: 0%;
+  border-radius: 6px;
+  transition: width 0.3s;
+}
+
+/* Results */
+.results {
+  text-align: center;
+  font-size: 0.95em;
+}
+
+/* Checklist */
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+  font-size: 0.9em;
+}
+
+.checklist li {
+  margin: 4px 0;
+}
+
+.pass {
+  color: #22c55e;
+}
+
+.fail {
+  color: #ef4444;
+}
+
+/* Tips */
+.tips {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #eab308;
+  text-align: center;
+}
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.input-wrapper input {
+  margin-top: 0; /* Remove top margin since wrapper has it */
+  padding-right: 60px; /* Make space for the button */
+}
+
+#toggleBtn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #38bdf8;
+  cursor: pointer;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+.generator-controls {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: rgba(30, 41, 59, 0.5);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.gen-btn {
+  background: #22c55e;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.gen-btn:hover {
+  background: #16a34a;
+}
